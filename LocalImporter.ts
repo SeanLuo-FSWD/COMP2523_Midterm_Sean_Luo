@@ -34,9 +34,9 @@ export class LocalImporter implements Importable {
       album.addTrack(song);
     }
 
-    let playlist = new Playlist(pl_name);
-    playlist.addAlbum(album);
+    let playlist_r = new Playlist(pl_name);
+    playlist_r.addAlbum(album);
 
-    return playlist;
+    return playlist_r;
   }
 }

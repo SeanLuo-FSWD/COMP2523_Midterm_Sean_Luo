@@ -20,17 +20,23 @@ let localPlaylistImporter = new PlaylistImporter(
   new LocalImporter("myPlaylist.txt")
 );
 
-let cloudPlaylistImporter = new PlaylistImporter(
-  new CloudImporter("www.youtube.com")
-);
+// COMMENTED OUT TO MAKE CODE WORK
+// let cloudPlaylistImporter = new PlaylistImporter(
+//   new CloudImporter("www.youtube.com")
+// );
 
 let localPlaylist = localPlaylistImporter.importPlaylist();
+
+// COMMENTED OUT TO MAKE CODE WORK
 // let cloudPlaylist = cloudPlaylistImporter.importPlaylist();
 
 let user = new User("jonh123", "12aabacaddfas!");
 
 user.addPlaylist(localPlaylist);
+
+// COMMENTED OUT TO MAKE CODE WORK
 // user.addPlaylist(cloudPlaylist);
+
 user.addPlaylist(playlist);
 
 console.log(user.getPlaylists());

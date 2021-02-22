@@ -2,13 +2,15 @@ import { LocalImporter } from "./LocalImporter";
 import { Importable } from "./Interfaces";
 
 export class PlaylistImporter {
-  importer: string;
+  importer: LocalImporter;
+  pl_name: string;
 
-  constructor(importer: string) {
+  constructor(importer: LocalImporter) {
     this.importer = importer;
+    this.pl_name = importer.imported_name;
   }
 
-  importPlaylist(importer: Importable) {
-    return this.importer.loadPlaylist(this.importer);
+  importPlaylist() {
+    return this.importer.loadPlaylist(this.pl_name);
   }
 }
